@@ -1,0 +1,44 @@
+/**
+  *
+  *
+  * {{properCase componentName}} Component
+  *
+  *
+*/
+
+import React from 'react';
+// import useLabelsRequest from 'customHooks/useLabelsRequest';
+// import useTheme from 'customHooks/useAppTheme';
+import { Container } from './styled';
+import IProps from './index.interface';
+
+/**
+  * the `componentName` comes from prompts actions
+  * properCase to captalize each word first Letter 
+*/
+
+const {{properCase componentName}}: React.FC<IProps> = (props): JSX.Element => {
+
+  // useLabelsRequest({{ camelCase componentName }});
+  
+  // const { colors } = useTheme()
+  
+  {{#if useInternalState}} 
+    /**
+      * `useInternalState` comes from prompts actions
+     */
+    const [state, setState] = React.useState("");
+  {{/if}}
+
+  
+
+  return (
+    <Container
+      // bgColor={colors.main}
+    >
+      {{properCase componentName}}
+    </Container>
+  );
+};
+
+export default {{#if memo}} React.memo({{ properCase componentName }}) {{else}} {{ properCase componentName }} {{/if}};

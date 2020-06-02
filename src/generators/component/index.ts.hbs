@@ -1,0 +1,27 @@
+/**
+  *
+  *
+  * {{properCase componentName}} Component
+  *
+  *
+*/
+
+import React from 'react';
+import { Container } from './styled';
+import IProps from './index.interface';
+
+/**
+  * the `componentName` comes from prompets actions
+  * properCase to captalize each word first Letter 
+*/
+
+const {{properCase componentName}}: React.FC<IProps> = (props): JSX.Element => {
+
+  return (
+    <Container>
+      {{properCase componentName}}
+    </Container>
+  );
+};
+
+export default {{#if memo}} React.memo({{ properCase componentName }}) {{else}} {{ properCase componentName }} {{/if}};
